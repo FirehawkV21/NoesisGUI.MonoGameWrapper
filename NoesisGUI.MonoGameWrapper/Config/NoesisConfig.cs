@@ -1,12 +1,12 @@
+using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Noesis;
+using NoesisGUI.MonoGameWrapper.Input.SystemSettings;
+using NoesisGUI.MonoGameWrapper.Providers;
+
 namespace NoesisGUI.MonoGameWrapper
 {
-    using System;
-    using Microsoft.Xna.Framework;
-    using Microsoft.Xna.Framework.Graphics;
-    using Noesis;
-    using NoesisGUI.MonoGameWrapper.Input.SystemSettings;
-    using NoesisGUI.MonoGameWrapper.Providers;
-
     public class NoesisConfig
     {
         private bool isInputSet;

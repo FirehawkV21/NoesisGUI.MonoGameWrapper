@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net471</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <DebugType>portable</DebugType>
     <OutputType>Library</OutputType>
     <RootNamespace>NoesisGUI.MonoGameWrapper</RootNamespace>
@@ -10,27 +10,14 @@
     <LangVersion>9</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PlatformTarget>x64</PlatformTarget>
+    <AssemblyVersion>1.0.0.22250</AssemblyVersion>
+    <FileVersion>1.0.0.22250</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
 
-  <!-- MonoGame local folder -->
-  <ItemGroup Condition="Exists('..\MonoGame\MonoGame.Framework')">
-    <Reference Include="MonoGame.Framework">
-      <HintPath>..\MonoGame\Artifacts\MonoGame.Framework\WindowsDX\Release\net452\MonoGame.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX">
-      <HintPath>..\MonoGame\Artifacts\MonoGame.Framework\WindowsDX\Release\net452\SharpDX.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.Direct3D11">
-      <HintPath>..\MonoGame\Artifacts\MonoGame.Framework\WindowsDX\Release\net452\SharpDX.Direct3D11.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.DXGI">
-      <HintPath>..\MonoGame\Artifacts\MonoGame.Framework\WindowsDX\Release\net452\SharpDX.DXGI.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <!-- MonoGame MSBuild install folder -->
   <ItemGroup>
     <None Remove=".gitignore" />
@@ -40,7 +27,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="Noesis.GUI" Version="3.0.12" />
   </ItemGroup>
 
